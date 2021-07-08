@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Attendence System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div>
+        <form action="login.php" method="POST">
+            <input class="btn" type="submit" value="Teacher Log in">
+        </form>
+    </div>
+    <br><br>
+
+
+    <div class="container">
+        <br>
+
+        <h1>Student Leave/Attendence System </h1>
+        <h2>Student Leave Request </h2><br>
+
+
+        <form action="leaveProcess.php" method="POST" enctype="multipart/form-data">
+
+
+            <label for="stud_id">Student ID: </label>
+            <input id="stud_id" type="number" name="stud_id" required> <br><br>
+
+            <label for="stud_name">Student Name: </label>
+            <input id="stud_name" type="text" name="stud_name" pattern="/^[A-Za-z]+([\ A-Za-z]+)*/" required> <br><br>
+
+            <label for="lsd">Leave Start Date: </label>
+            <input id="lsd" type="date" name="leave_start_date" required> <br><br>
+
+            <label for="led">Leave End Date: </label>
+            <input id="led" type="date" name="leave_end_date" required> <br><br>
+
+            <label for="lr">Leave Reason: </label>
+            <input id="lr" type="text" name="leave_reason" required> <br><br>
+
+            <label for="lt">Leave Type: </label>
+            <select id="lt" name="leave_type" required>
+                <option value="Sick Leave">Sick Leave</option>
+                <option value="Casual Leave">Casual Leave</option>
+                <option value="Study Leave">Study Leave</option>
+            </select> <br><br>
+
+            <label for="stud_image">Leave Applic. Photo: </label>
+            <input id="stud_image" type="file" name="photo" required> <br><br>
+
+            <label for="en"> No. of Days: </label>
+            <input id="en" type="number" name="days_no"  required><br><br>
+
+            <!--<label id="submitter" for="final"></label>-->
+            <input class="btn" type="submit">
+
+        </form>
+    <br><br>
+
+
+    </div>
+</body>
+
+</html>
